@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proposal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <img src="https://clipart-library.com/images/di4ozk5LT.gif" class="background" alt="Pink Hearts Background">
+        <img src="https://media.tenor.com/lSgJHaor3IAAAAAj/bubu-onetwo.gif" class="teddy-bear" alt="Teddy Bear">
+        <div class="question-box">
+            <div class="question">Will you be my boyfriend?</div>
+        </div>
+        <div class="buttons">
+            <button id="yes-btn" onclick="yesClicked()">Yes</button>
+            <button id="no-btn" onmouseover="hideNoButton()" onmouseout="showNoButton()">No</button>
+        </div>
+    </div>
+    <script>
+        function yesClicked() {
+            window.location.href = "yes_page.html"; // Redirect to the "yes_page.html"
+        }
+
+        function hideNoButton() {
+            var noButton = document.getElementById("no-btn");
+            noButton.style.opacity = "0"; // Make the No button transparent
+            var yesButton = document.getElementById("yes-btn");
+            yesButton.style.fontSize = "40px"; // Increase font size of the Yes button
+            yesButton.style.padding = "30px 60px"; // Increase padding of the Yes button
+        }
+
+        function showNoButton() {
+            var noButton = document.getElementById("no-btn");
+            noButton.style.opacity = "1"; // Make the No button visible again
+            var yesButton = document.getElementById("yes-btn");
+            yesButton.style.fontSize = "24px"; // Reset font size of the Yes button
+            yesButton.style.padding = "20px 40px"; // Reset padding of the Yes button
+        }
+    </script>
+</body>
+</html>
